@@ -23,5 +23,18 @@ def projectquiz():
     return render_template('projectquiz.html')
 
 @app.route('/review')
-def projectaboutus():
+def review():
     return render_template('review.html')
+
+@app.route('/review/new', methods=['GET', 'POST'])
+def reviewform():
+    form = ReviewForm()
+    if form.validate_on_submit():
+        flash('Review submitted!', 'success')
+        return redirect(url_for('reviewform')) 
+    return render_template('reviewform.html', form=form)
+
+@app.route('/reviews')
+def reviews():
+    return render_template('reviews.html')
+
