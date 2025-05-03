@@ -97,3 +97,12 @@ class Clinic(Document):
     meta = {
         'ordering': ['-createdate']
     }
+    
+class Review(Document):
+    subject     = StringField(required=True)
+    content     = StringField(required=True)
+    tag         = StringField()
+    author      = ReferenceField('User', required=True)
+    modify_date = DateTimeField()
+    image_path  = StringField()
+    # … any other fields …

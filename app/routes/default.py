@@ -21,3 +21,7 @@ def projectpage():
 @app.route('/projectquiz')
 def projectquiz():
     return render_template('projectquiz.html')
+
+@app.route('/review')
+def projectaboutus():
+    return render_template('review.html')
