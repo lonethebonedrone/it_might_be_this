@@ -25,36 +25,53 @@
         <body style="background-color: #FFE5B4;">
           <nav class="navbar bg-white navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">  <!-- Centering the navbar items -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">
-                                <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/projectaboutus">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/projectquiz">Quiz</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/projectpage">Shelters</a> <!-- Added the new link -->
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+              <a class="nav-item" href="/">
+                <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
+              </a>
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                
+                <!-- Centered nav links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/projectaboutus">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/projectquiz">Quiz</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/projectpage">Shelters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Reviews</a>
+                  </li>
+                </ul>
+          
+                <!-- Right-aligned login/logout -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  {% if current_user.is_anonymous %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="/myprofile">{{ current_user.gname }}</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                  </li>
+                  {% endif %}
+                </ul>
+          
+              </div>
             </div>
-        </nav>   
-  <center><h1 class="fade-in-section"><u>Oakland Homeless Shelters</u></h1></center>
+          </nav>   
+  <center><h1 class="fade-in-section"><u>Featured Oakland Homeless Shelters</u></h1></center>
   <div class="container mt-5 bg-subtle">
     <div class="container text-center">
       <div class="row">
@@ -74,6 +91,11 @@
           <a href="https://www.cityteam.org/get-help/oakland">CityTeam</a>
           <br>
           <small class="text">722 Washington Street, Oakland, California</small>
+          <br>
+          <br>
+          <h6>
+            A community-oriented homeless shelter aiming to restoring lives with programs providing food, shelter, clothing, etc. Spreads Christianity to those who need love and long-lasting solutions. 
+          </h6>
         </div>
         <div class="col fade-in-section">
           <img src="https://naturalbuildingblog.com/wp-content/uploads/Screenshot_2021-05-10-Homeless-Oaklanders-bring-hot-showers-medical-care-and-a-pizza-oven-to-their-encampment1.png" width="350" height="350">
@@ -81,6 +103,11 @@
           <a href="https://www.facebook.com/CobonWood/">Cob on Wood</a>
           <br>
           <small class="text">Wood St and 24th, Oakland, California</small>
+        <br>
+        <br>
+        <h6>
+          A cob-based commons space, serving the wood street residents of West Oakland. Helps create houses and shelter for the homeless, giving them a place to stay rather than on the streets.
+        </h6>
         </div>
       </div>
       <div class="row">
@@ -90,12 +117,22 @@
           <a href="https://www.findhelp.org/st.-mary's-center--oakland-ca--friendly-manor/5767054463860736?postal=94601">A Friendly Manor</a>
           <br>
           <small class="text">2298 San Pablo Ave, Oakland, California</small>
+        <br>
+        <br>
+        <h6>
+          A safe homeless shelter dedicated for homeless women, and they can drop in anytime. Works to help homeless women take the "next step" towards a better life.
+        </h6>
         </div>
         <div class="col fade-in-section">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB9E58gTuQZQ5liV7nbmIrEVYRhQzTdFI2t3nOp9q6j2BmV7wplaGCuUrj9DUhS57CrjCfKo2c5383M1bfs5ALa6GW6FupIVwj2b1on2WXxN1UPGputYIk3GiujiHTuVsRzhxxSq=s1360-w1360-h1020" width="350" height="350">
           <a href="https://www.achch.org/">Alameda County Health Care for the Homeless</a>
           <br>
           <small class="text">384 14th Street, Oakland, California</small>
+        <br>
+        <br>
+        <h6>
+          Provides to anyone in Alameda County, where all health services are provided without charge to those who cannot pay. A federally-funded homeless shelter, which gives heatlh services to the homeless. 
+        </h6>
         </div>
         <div class="col fade-in-section">
           <img src="https://lh3.googleusercontent.com/p/AF1QipMkgBbGqd-hB_70OmqLf0jmTN5kA1ymnEDmi3Tf=s1360-w1360-h1020" width="350" height="350">
@@ -103,6 +140,9 @@
           <a href="https://www.serenityhouseoakland.org/">Serenity House</a>
           <br>
           <small class="text">2363A San Pablo Ave, Oakland, California</small>
+          <h6>
+            Helps homeless mothers get back on track from substance abuse and domestic violence. Includes programs such as a 16-week journey to learn how to handle money and have enough to afford a home for themselves. 
+          </h6>
         </div>
       </div>
     </div>
@@ -129,4 +169,12 @@
     });
   </script>
 </body>
+<footer class="text-center mt-5 py-4" style="background-color:#FFE5B4;">
+  <p class="m-0">
+    <small>&#169; 2025 <strong>Michael Arikew, Lone Htoo, Teghsburen Tunamal</strong> - Capstone Project</small>
+  </p>
+  <p class="m-0">
+    <small><strong>Together WeShelter</strong> | All rights reserved.</small>
+  </p>
+</footer>    
 </html>

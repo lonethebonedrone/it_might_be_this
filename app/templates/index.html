@@ -23,44 +23,63 @@
     </style>    
   </head>
 <body class="container-fluid bs-primary-bg-subtle" style="background-color:#FFE5B4">
-  <nav class="navbar bg-white navbar-expand-lg"> 
+  <nav class="navbar bg-white navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 mt-2">  <!-- Centering the navbar items -->
-                <li class="nav-item">
-                    <a class="nav-link" href="/">
-                        <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
-                    </a>
-                </li>
-                <li class="nav-item align-middle">
-                    <a class="nav-link align-middle" href="/projectaboutus">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/projectquiz">Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/projectpage">Shelters</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/review">Reviews</a> 
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                </li>
-            </ul>
-        </div>
+      <a class="nav-item" href="/">
+        <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
+      </a>
+  
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        
+        <!-- Centered nav links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/projectaboutus">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projectquiz">Quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projectpage">Shelters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs">Reviews</a>
+          </li>
+        </ul>
+  
+        <!-- Right-aligned login/logout -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          {% if current_user.is_anonymous %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/myprofile">{{ current_user.gname }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+          </li>
+          {% endif %}
+        </ul>
+  
+      </div>
     </div>
-</nav>
+  </nav>  
+  <br>
+  <br>
+  <br>
           <div class="fade-in-section">
-          <center><u><h1>Together WeShelter</h1></u></center>
+          <big><center><u><h1 style="font-size: 69px;">Together WeShelter</h1></u></center></big>
           </div>
-          <br>          
+          <br>       
+          <br>
+          <br>   
         <div id="carouselExampleIndicators"  class="carousel slide fade-in-section">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -95,19 +114,19 @@
           <div class="container mt-5 text-center bg-subtle bg-opacity-10 fade-in-section visible">
             <div class="row">
               <div class="col-4">
-                <img class="rounded-circle centered-profile" src="/static/logo.png" width="350" height="350">
+                <img class="rounded-circle centered-profile" src="/static/homeless.png" width="300" height="300">
                 <br>
                 <br>
                 <h2 class="text">Raise Awareness on Homelessness</h2>
               </div>
               <div class="col-4">
-                <img class="rounded-circle" src="/static/logo.png" width="350" height="350">
+                <img class="rounded-circle" src="/static/voice.png" width="300" height="300">
                 <br>
                 <br>
                 <h2 class="text">Allow People's Voices to be Heard</h2>
               </div>
               <div class="col-4">
-                <img class="rounded-circle" src="/static/logo.png" width="350" height="350">
+                <img class="rounded-circle" src="/static/community.png" width="300" height="300">
                 <br>
                 <br>
                 <h2 class="text">Strenghten Communities through Service</h2>
@@ -172,4 +191,12 @@
           });
         </script>        
       </body>
+      <footer class="text-center mt-5 py-4" style="background-color:#FFE5B4;">
+        <p class="m-0">
+          <small>&#169; 2025 <strong>Michael Arikew, Lone Htoo, Teghsburen Tunamal</strong> - Capstone Project</small>
+        </p>
+        <p class="m-0">
+          <small><strong>Together WeShelter</strong> | All rights reserved.</small>
+        </p>
+      </footer>      
 </html>

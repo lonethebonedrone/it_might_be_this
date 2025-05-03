@@ -1,28 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <div class="container-fluid mb-3">
-    <a class="navbar-brand display-5 text-black fw-bold" href="/index">Adolescent Sleep Tracker</a>
+<nav class="navbar bg-white navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="nav-item" href="/">
+      <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold" style="margin: 0% 37%;">
-        <li class="nav-item">
-          <a class="nav-link" href="/index">Home</a>
-        </li>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      
+      <!-- Centered nav links -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="/projectaboutus">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projectquiz">Quiz</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/projectpage">Shelters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/projectquiz">Quiz</a>
+          <a class="nav-link" href="/review">Reviews</a>
         </li>
       </ul>
 
-      <!-- Optional user section if using Flask templating -->
+      <!-- Right-aligned login/logout -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         {% if current_user.is_anonymous %}
         <li class="nav-item">
@@ -37,6 +42,7 @@
         </li>
         {% endif %}
       </ul>
+
     </div>
   </div>
-</nav>
+</nav>  
