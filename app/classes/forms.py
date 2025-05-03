@@ -53,3 +53,9 @@ class ClinicForm(FlaskForm):
     zipcode = StringField('Zipcode',validators=[DataRequired()])
     description = StringField('Description', validators=[DataRequired()])
     submit = SubmitField('Submit')
+
+class ReviewForm(FlaskForm):
+    subject = StringField('Title', validators=[DataRequired()])
+    content = TextAreaField('Content', validators=[DataRequired()])
+    tag     = SelectField('Category', choices=[('positive','Positive'),('negative','Negative')])
+    image   = FileField('Image (optional)')
