@@ -38,3 +38,6 @@ def reviewform():
 def reviews():
     return render_template('reviews.html')
 
+@app.route('/blogs')
+def blogs():
+    return render_template('blogs.html')
