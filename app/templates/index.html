@@ -1,82 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<div class="container-fluid bs-primary-bg-subtle">
+    <body>
+        <nav class="navbar bg-info
+ navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="projecthome.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="projectaboutus.html">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="projectpage.html">Shelters</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="projectquiz.html">Quiz</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
 
-  
-    {% extends 'base.html' %}
+      <i><center><u><h1>Welcome to our website!</h1></u></center></i> <br>
 
-
-{% block body %}
-    <div style="background-color: #9bbeeb;" >  
-
-      <img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
-      <img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
-
-      <img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">
-    
-    <img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">
-    
-    <h1 class="display-4 text-center ">Welcome everyone!!!</h1>
-    
-    
-
-
-
-    <h1 class=" display-6 text-center"> to</h1>
-
-   
-
-
-    <h1 class="display-4 text-center"> Adolescent sleep tracker </h1>
-    <p></p>
-    <p></p>
-
-    <div class="container text-left display-7 text-center border border-5 whtie" >
-        <div class="row">
-        <div class="col">
-          <b> Our Misson statement:</b>
-          <p>A sleep tracker for students made by students, specialized for the patterns of students going from childhood to adolescence and bringing awareness to the overall severe effect of sleep deprivation on young brains. Also, draw attention to this problem so teachers and parents can look for signs in their students <p> </p></p>
-        </div>
-    </div>
-    </div>
-
-    <img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
-    <img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
-
-
-     
-    <img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">
-    <img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">
-
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9578_1_orig.jpg" class="d-block w-100" alt="..." width="100" height="700">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9595_1_orig.jpg" class="d-block w-100" alt="..." width="100" height="700">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-3202_1_orig.jpg" class="d-block w-100" alt="..." width="100" height="700">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
           
-     
-<p></p>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="/static/homeimg.jpg" class="d-block w-100" alt="..." width="400" height="500">
-      </div>
-      <div class="carousel-item">
-        <img src="/static/homeimg2.jpg" class="d-block w-100" alt="..."  width="400" height="500" >
-      </div>
-      <div class="carousel-item">
-        <img src="/static/homeimg3.jpg" class="d-block w-100" alt="..." width="400" height="500">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+      <i><center><u><h1>Our Mission</h1></u></center></i> <br>
 
-
-
-
-    
-    
-
-
-    
-
-    {% endblock %}
+          <div class="container" style="max-width: 1250px; margin: auto;">
+  <h3 class="header 1 border border-dark text-center bg-subtle bg-opacity-10">
+    Welcome to our project, a website to help make navigating Oakland's homeless shelters, programs, and support systems more easier. We hope this website is helpful to those in need or for those who want to volunteer at local homeless shelters.
+  </h3>
+</div>
+      <i><center><u><h1>What is homelessness?</h1></u></center></i> <br>
+      
+     <div class="container" style="max-width: 1250px; margin: auto;">
+  <h3 class="header 1 border border-dark text-center bg-subtle bg-opacity-10">
+    Homelessness is the condition of not having stable, safe, and adequate housing, often due to a combination of poverty, lack of affordable housing, mental health issues, and systemic inequality. It affects individuals, families, and communities, with people living on the streets, in shelters, or in temporary accommodations. Addressing homelessness requires coordinated efforts in housing, healthcare, employment, and social services.
+  </h3>
+</div>
+      <i><center><u><h1>What are the effects of homelessness on teens?</h1></u></center></i> <br>
+      
+      <div class="container" style="max-width: 1250px; margin: auto;">
+  <h3 class="header 1 border border-dark text-center bg-subtle bg-opacity-10">
+    30% of the homeless population are families with children, with 6% of children being unaccompanied. The Bay Area's environment makes it hard to find homeless shelters, with the lack of affordable housing being the main problem to homelessness in the Bay Area.
+  </h3>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</div>
+</html>
