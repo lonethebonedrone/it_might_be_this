@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+    
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
 </head>
 <div class="container-fluid bg-subtle bg-opacity-10">
-    <body>
-        <nav class="navbar bg-info navbar-expand-lg">
+    <body style="background-color:#FFE5B4">
+        <nav class="navbar bg-white navbar-expand-lg">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +33,7 @@
                       <img src="/static/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
                     </a>
                   </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="/projectpage">Shelters</a>
                   </li>
@@ -31,19 +44,21 @@
               </div>
             </div>
           </nav>
-
-          <center><u><i><h1>About the Website</h1></i></u></center>
-
+          <div class="fade-in-section text-center">
+            <h1><u><i>About the Website</i></u></h1>
+          </div>
           <br>
-
-          <div class="container text-center">
-            <div class="col-12 bg-subtle bg-opacity-10 border border-dark border-opacity-20">
+          <div class="container text-center fade-in-section">
+            <div class="col-12 bg-subtle bg-opacity-10 border border-dark border-opacity-20 fade-in-section">
               <h4 class="text">We created this website in hopes to spread awareness of homelessness and to also help people find out and understand the different homeless shelters that the city of Oakland provides. We chose to create a website on this issue because it's more common to see someone houseless in the Bay Area than a lot of other places, and therefore it has impacted us and our feelings as we've all seen it throughout our lives.  </h4>
             </div>
           </div>
 
         <br>
-        <center><i><u><h1>Meet Our Team</h1></u></i></center>
+        <div class="fade-in-section text-center">
+          <h1><u><i>Meet the Team</i></u></h1>
+        </div>
+        
         <style>
           .centered-profile {
             object-fit: cover;
@@ -52,27 +67,258 @@
             height: 350px;
           }
         </style>        
-        <div class="container mt-5 text-center bg-subtle bg-opacity-10">
+        <div class="container mt-5 text-center bg-subtle bg-opacity-10 fade-in-section">
           <div class="row">
             <div class="col-4">
               <img class="rounded-circle centered-profile" src="/static/mike.png" width="350" height="350">
               <h2 class="text">Mike Tunamal</h2>
-              <small class="text">My name is Mike and I am a senior at Oakland Tech. I'll be attending Cal Poly Slo in the Fall in which I will major in Electrial Engineering. My hobbies are playing basketball and soccer. I also enjoy doomscrolling and gambling for my sources of dopamine.</small>
+              <small class="text">My name is Mike and I am a senior at Oakland Tech. I'll be attending Cal Poly Slo in the Fall in which I will major in Electrical Engineering. My hobbies are playing basketball and soccer. I also enjoy doomscrolling and gambling for my sources of dopamine.</small>
             </div>
             <div class="col-4">
               <img class="rounded-circle" src="/static/lone.png" width="350" height="350">
               <h2 class="text">Lone Way Htoo</h2>
-              <small class="text">My name is Lone and I am a senior at Oakland Tech. I will commit to San Jose State University this fall majoring in Chemical Engineering. My hobbies are long walks and <s>gambling</s> exploring high-risk investments. In my free time I will destroy opponents in League of Legends or Clash Royale. </small>
+              <small class="text">My name is Lone and I am a senior at Oakland Tech. I will commit to San Jose State University this fall majoring in Chemical Engineering. My hobbies are long walks and exploring high-risk investments. In my free time I will hop into a game of Chess. </small>
             </div>
             <div class="col-4">
               <img class="rounded-circle" src="/static/michael.png" width="350" height="350">
               <h2 class="text">Michael Arikew</h2>
-              <small class="text">My name is Michael and I'm senior at Oakland Techincal High and will be attending at UC Davis during the fall to major in Artifical Intelligence. During my free time, I play soccer and mostly hanging out with my friends and I also do enjoy hiking and reading books. </small>
+              <small class="text">My name is Michael and I'm senior at Oakland Technical High and will be attending at UC Davis during the fall to major in Artificial Intelligence. During my free time, I play soccer and mostly hanging out with my friends and I also do enjoy hiking and reading books. </small>
             </div> 
           </div>
-        </div>        
-          
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
-</div>
-</html>
+        </div>      
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Contact Us Part -->
+        <section
+  id="comp-ki5d5rsy"
+  class="comp-ki5d5rsy CohWsy wixui-column-strip text-center fade-in-section"
+>
+  <div
+    id="bgLayers_comp-ki5d5rsy"
+    data-hook="bgLayers"
+    data-motion-part="BG_LAYER comp-ki5d5rsy"
+    class="if7Vw2"
+  >
+    <div data-testid="colorUnderlay" class="tcElKx i1tH8h"></div>
+    <div
+      id="bgMedia_comp-ki5d5rsy"
+      data-motion-part="BG_MEDIA comp-ki5d5rsy"
+      class="wG8dni"
+    ></div>
+  </div>
+
+  <div data-testid="columns" class="V5AUxf">
+    <!--$-->
+    <div
+      id="comp-ki5d5rsy1"
+      class="comp-ki5d5rsy1 YzqVVZ wixui-column-strip__column"
+    >
+      <div
+        id="bgLayers_comp-ki5d5rsy1"
+        data-hook="bgLayers"
+        data-motion-part="BG_LAYER comp-ki5d5rsy1"
+        class="MW5IWV"
+      >
+        <div data-testid="colorUnderlay" class="LWbAav Kv1aVt"></div>
+        <div
+          id="bgMedia_comp-ki5d5rsy1"
+          data-motion-part="BG_MEDIA comp-ki5d5rsy1"
+          class="VgO9Yg"
+        ></div>
+      </div>
+
+      <div
+        data-mesh-id="comp-ki5d5rsy1inlineContent"
+        data-testid="inline-content"
+        class="text-center"
+      >
+        <div
+          data-mesh-id="comp-ki5d5rsy1inlineContent-gridContainer"
+          data-testid="mesh-container-content"
+        >
+          <!--$-->
+          <div
+            id="comp-ki5d5rsy2"
+            class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-ki5d5rsy2 wixui-rich-text text-center"
+            data-testid="richTextElement"
+            ariaattributes="[object Object]"
+          >
+            <h2
+              class="font_6 wixui-rich-text__text text-center"
+              style="line-height:1.35em; font-size:40px;"
+            >
+              <span style="font-weight:bold;" class="wixui-rich-text__text">
+                <span style="color:#1b1a1a;" class="wixui-rich-text__text">
+                  <span style="letter-spacing:normal;" class="wixui-rich-text__text">
+                    CONTACT US
+                  </span>
+                </span>
+              </span>
+            </h2>
+          </div>
+          <!--/$-->
+
+          <div
+            id="comp-ki5d5rsz"
+            class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-ki5d5rsz wixui-rich-text text-center"
+            data-testid="richTextElement"
+            ariaattributes="[object Object]"
+          >
+            <p
+              class="font_9 wixui-rich-text__text text-center"
+              style="font-size:18px; line-height:1.88em;"
+            >
+              <span style="color:#000000;" class="wixui-rich-text__text">
+                <span style="font-size:18px;" class="wixui-rich-text__text">
+                  <span style="letter-spacing:normal;" class="wixui-rich-text__text">
+                    4351 Broadway, Oakland, CA 94611 (Oakland Technical High School)
+                  </span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <!--/$-->
+
+          <div
+            id="comp-ki5d5rsz1"
+            class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-ki5d5rsz1 wixui-rich-text text-center"
+            data-testid="richTextElement"
+            ariaattributes="[object Object]"
+          >
+            <p
+              class="font_9 wixui-rich-text__text text-center"
+              style="font-size:18px; line-height:1.88em;"
+            >
+              <span style="color:#000000;" class="wixui-rich-text__text">
+                <span style="font-size:18px;" class="wixui-rich-text__text">
+                  <span style="letter-spacing:normal;" class="wixui-rich-text__text">
+                    Email:
+                    <a
+                      data-auto-recognition="true"
+                      href="mailto:lonehtoo2@gmail.com"
+                      class="wixui-rich-text__text"
+                    >
+                      lonehtoo2@gmail.com
+                    </a>
+                  </span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <!--/$-->
+
+          <div
+            id="comp-kjgfjjb8"
+            class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-kjgfjjb8 wixui-rich-text text-center"
+            data-testid="richTextElement"
+            ariaattributes="[object Object]"
+          >
+            <p
+              class="font_8 wixui-rich-text__text text-center"
+              style="font-size:18px; line-height:1.3em;"
+            >
+              <span style="color:#000000;" class="wixui-rich-text__text">
+                <span style="font-size:18px;" class="wixui-rich-text__text">
+                  <span style="letter-spacing:0.03em;" class="wixui-rich-text__text">
+                    Comments and suggestions can be sent to:&nbsp;
+                  </span>
+                  <span style="letter-spacing:0.03em;" class="wixui-rich-text__text">
+                    <span
+                      style="text-decoration:underline;"
+                      class="wixui-rich-text__text"
+                    >
+                      <a
+                        href="mailto:lonehtoo2@gmail.com?subject=Suggestions/%20Comments%20to%20Capstone%20Website"
+                        target="_self"
+                        class="wixui-rich-text__text"
+                      >
+                        mike.tunamal@gmail.com
+                      </a>
+                    </span>
+                  </span>
+                </span>
+              </span>
+            </p>
+          </div>
+          <!--/$-->
+
+          <div
+            id="comp-kjgfxduh"
+            class="HcOXKn c9GqVL QxJLC3 lq2cno YQcXTT comp-kjgfxduh wixui-rich-text text-center"
+            data-testid="richTextElement"
+            ariaattributes="[object Object]"
+          >
+            <h1
+              class="font_0 wixui-rich-text__text text-center"
+              style="font-size:34px; line-height:normal;"
+            >
+              <span style="font-weight:bold;" class="wixui-rich-text__text">
+                <span style="color:#2e2d2d;" class="wixui-rich-text__text">
+                  <span style="font-size:34px;" class="wixui-rich-text__text">
+                    Our links
+                  </span>
+                </span>
+              </span>
+            </h1>
+          </div>
+          <!--/$-->
+
+          <div id="comp-kjgfwvau" class="comp-kjgfwvau WzbAF8 text-center">
+            <ul class="mpGTIt" aria-label="Social Bar">
+              <li id="dataItem-kjgfwvbl-comp-kjgfwvau" class="O6KwRn">
+                <a
+                  data-testid="linkElement"
+                  href="https://www.instagram.com/namiikazi/"
+                  target="_blank"
+                  class="oRtuWN"
+                  aria-label="Instagram"
+                >
+                  <img
+                    sizes="undefinedpx"
+                    srcset="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png 1x,
+                    https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png 2x"
+                    id="img_1_comp-kjgfwvau"
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                    alt="Instagram"
+                    style="width: 40px; height: 40px; text-center"
+                    class="YaS0jR I5zqsT"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const sections = document.querySelectorAll(".fade-in-section");
+      
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Optional: only animate once
+              }
+            });
+          }, {
+            threshold: 0.1
+          });
+      
+          sections.forEach(section => {
+            observer.observe(section);
+          });
+        });
+      </script>      
+      </body>
+      </div>
+      </html>
+      
