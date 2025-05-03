@@ -1,46 +1,78 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<img src="/static/CloudsPNG.png" class="rounded float-end" width = "200" hieght= "200" alt="...">
+<style>
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
 
-<img src="/static/CloudsPNG.png" class="rounded float-start" width = "200" hieght= "200" alt="...">    </div>
-<div class="row">
-    <div class="col">
-        <h1 class="display-5">Any Feedback for us?</h1>
-    </div>
-    <div class="col">
-        <a href="/blog/new" class="btn btn-primary btn-sm mt-5" role="button">Add a post here</a>
-    </div>
-</div>
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: none;
+  }
 
-{% if blogs %}
-    {% for blog in blogs %}
-        <div class="container row border-bottom">
-            <div class="col-2">
-                {% if loop.index == 1 %}
-                <h3 class="display-5">Date</h3>
-                {% endif %}
+  body {
+    background-color: #FFE5B4;
+  }
+</style>
 
-                <a href="/blog/{{blog.id}}">
-                    {{moment(blog.create_date).calendar()}}
-                </a>
-            </div>
-            <div class="col-2">
-                {% if loop.index == 1 %}
-                <h3 class="display-5">User</h3>
-                {% endif %}
-                {{blog.author.fname}} {{blog.author.lname}}
-            </div>
-            <div class="col">
-                {% if loop.index == 1 %}
-                    <h3 class="display-5">Subject</h3>
-                {% endif %}
-                {{blog.subject}}
-            </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".fade-in-section");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+
+<div class="container-fluid" style="background-color:#FFE5B4;">
+  <div class="fade-in-section text-center">
+    <img src="/static/homeless.png" class="rounded float-end" width="200" height="200" alt="...">
+    <img src="/static/homeless.png" class="rounded float-start" width="200" height="200" alt="...">
+    <br><br><br>
+    <h1 class="display-4"><u>Any feedback? Let us know here!</u></h1>
+    <a href="/blog/new" class="btn btn-primary btn-sm mt-3" role="button">Add a Post Here</a>
+  </div>
+
+  <div class="container mt-5 fade-in-section">
+    {% if blogs %}
+      <div class="row mb-3">
+        <div class="col-2"><h3 class="display-6">Date</h3></div>
+        <div class="col-2"><h3 class="display-6">User</h3></div>
+        <div class="col"><h3 class="display-6">Subject</h3></div>
+      </div>
+      {% for blog in blogs %}
+        <div class="row border-bottom fade-in-section py-3">
+          <div class="col-2">
+            <a href="/blog/{{ blog.id }}">
+              {{ moment(blog.create_date).calendar() }}
+            </a>
+          </div>
+          <div class="col-2">
+            {{ blog.author.fname }} {{ blog.author.lname }}
+          </div>
+          <div class="col">
+            {{ blog.subject }}
+          </div>
         </div>
-    {% endfor %}
-{% else %}
-
-{% endif %}
-
+      {% endfor %}
+    {% else %}
+      <div class="fade-in-section text-center">
+        <p class="lead">No blog posts yet. Be the first to share your thoughts!</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
