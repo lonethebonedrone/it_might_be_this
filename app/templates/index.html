@@ -6,197 +6,151 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-      }
-    
-      .fade-in-section.visible {
-        opacity: 1;
-        transform: none;
-      }
-      .carousel-image {
-  height: 850px; 
-  object-fit: cover;
-}
-    </style>    
-  </head>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .carousel-image {
+            height: 850px;
+            object-fit: cover;
+        }
+    </style>
+</head>
 <body class="container-fluid bs-primary-bg-subtle" style="background-color:#FFE5B4">
-  <nav class="navbar bg-white navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="nav-item" href="/">
-        <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
-      </a>
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        
-      
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/projectaboutus">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projectquiz">Quiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projectpage">Shelters</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/blogs">Reviews</a>
-          </li>
-        </ul>
-  
-     
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          {% if current_user.is_anonymous %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="/myprofile">{{ current_user.gname }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-          </li>
-          {% endif %}
-        </ul>
-  
-      </div>
-    </div>
-  </nav>  
-  <br>
-  <br>
-  <br>
-          <div class="fade-in-section">
-          <big><center><u><h1 style="font-size: 69px;">Together WeShelter</h1></u></center></big>
-          </div>
-          <br>       
-          <br>
-          <br>   
-        <div id="carouselExampleIndicators"  class="carousel slide fade-in-section">
+    <nav class="navbar bg-white navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="nav-item" href="/index">
+                <img src="/static/logo.png" alt="Logo" width="45" height="45" class="d-inline-block">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/projectaboutus">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projectquiz">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/projectpage">Shelters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {% if current_user.is_anonymous %}
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="/myprofile">{{ current_user.gname }}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+<br>
+<br>
+    <main class="fade-in-section">
+        <div class="text-center">
+            <h1 class="display-1"><u><b>Together WeShelter</b></u></h1>
+        </div>
+<br>
+<br>
+        <div id="carouselExampleIndicators" class="carousel slide fade-in-section">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" class="fade-in-section">
-                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9578_1_orig.jpg" class="d-block w-100 carousel-image" alt="...">
-              </div>
-              <div class="carousel-item" class="fade-in-section">
-                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9595_1_orig.jpg" class="d-block w-100 carousel-image" alt="...">
-              </div>
-              <div class="carousel-item" class="fade-in-section">
-                <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-3202_1_orig.jpg" class="d-block w-100 carousel-image" alt="...">
-              </div>
+                <div class="carousel-item active">
+                    <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9578_1_orig.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-9595_1_orig.jpg" class="d-block w-100 carousel-image" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.eastoaklandcollective.com/uploads/8/4/5/0/84505218/img-3202_1_orig.jpg" class="d-block w-100 carousel-image" alt="Slide 3">
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
-          <br>
-          <br>
-          <div class="fade-in-section">
-            <i><center><u><h1>Our Mission</h1></u></center></i>
-          </div>
-          <div class="container mt-5 text-center bg-subtle bg-opacity-10 fade-in-section visible">
-            <div class="row">
-              <div class="col-4">
-                <img class="rounded-circle centered-profile" src="/static/homeless.png" width="300" height="300">
-                <br>
-                <br>
-                <h2 class="text">Raise Awareness on Homelessness</h2>
-              </div>
-              <div class="col-4">
-                <img class="rounded-circle" src="/static/voice.png" width="300" height="300">
-                <br>
-                <br>
-                <h2 class="text">Allow People's Voices to be Heard</h2>
-              </div>
-              <div class="col-4">
-                <img class="rounded-circle" src="/static/community.png" width="300" height="300">
-                <br>
-                <br>
-                <h2 class="text">Strenghten Communities through Service</h2>
-                <br>
-                <br>
-              </div> 
+        </div>
+
+        <section class="fade-in-section text-center mt-5">
+            <h1><u><i>Our Mission</i></u></h1>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/static/homeless.png" class="rounded-circle" width="300" height="300">
+                        <h2 class="mt-3">Raise Awareness on Homelessness</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/voice.png" class="rounded-circle" width="300" height="300">
+                        <h2 class="mt-3">Allow People's Voices to be Heard</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/static/community.png" class="rounded-circle" width="300" height="300">
+                        <h2 class="mt-3">Strengthen Communities through Service</h2>
+                    </div>
+                </div>
             </div>
-          </div>
-          
-    <br>
-    <br>
-  </h3>
-</div class="fade-in-section">
-<div class="fade-in-section">
-  <i><center><u><h1>What is homelessness?</h1></u></center></i>
-  <br>
-  <br>
-</div>
-      
-<div class="container" style="max-width: 1250px; margin: auto;">
-  <h3 class="header 1 border border-dark text-center bg-subtle bg-opacity-10 fade-in-section" style="padding: 40px;">
-    <br>
-    Homelessness is the condition of not having stable, safe, and adequate housing, often due to a combination of poverty, lack of affordable housing, mental health issues, and systemic inequality. It affects individuals, families, and communities, with people living on the streets, in shelters, or in temporary accommodations. Addressing homelessness requires coordinated efforts in housing, healthcare, employment, and social services.
-  </h3>
-  <br>
-  <br>
-</div>
+        </section>
 
-<div class="fade-in-section">
-  <i><center><u><h1>The effects of homelessness</h1></u></center></i>
-  <br>
-  <br>
-</div>
+        <section class="fade-in-section text-center mt-5">
+            <h1><u><i>What is homelessness?</i></u></h1>
+            <div class="container mt-4">
+                <div class="border border-dark p-4">
+                    <h3>
+                        Homelessness is the condition of not having stable, safe, and adequate housing, often due to a combination of poverty, lack of affordable housing, mental health issues, and systemic inequality. It affects individuals, families, and communities, with people living on the streets, in shelters, or in temporary accommodations. Addressing homelessness requires coordinated efforts in housing, healthcare, employment, and social services.
+                    </h3>
+                </div>
+            </div>
+        </section>
 
-<div class="container" style="max-width: 1250px; margin: auto;">
-  <h3 class="header 1 border border-dark text-center bg-subtle bg-opacity-10 fade-in-section" style="padding: 40px;">
-    <br>
-    30% of the homeless population are families with children, with 6% of children being unaccompanied. The Bay Area's environment makes it hard to find homeless shelters, with the lack of affordable housing being the main problem to homelessness in the Bay Area.
-  </h3>
-</div>
+        <section class="fade-in-section text-center mt-5">
+            <h1><u><i>The effects of homelessness</i></u></h1>
+            <div class="container mt-4">
+                <div class="border border-dark p-4">
+                    <h3>
+                        30% of the homeless population are families with children, with 6% of children being unaccompanied. The Bay Area's environment makes it hard to find homeless shelters, with the lack of affordable housing being the main problem to homelessness in the Bay Area.
+                    </h3>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <br>
-                <br>
-</div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
             const sections = document.querySelectorAll(".fade-in-section");
-        
             const observer = new IntersectionObserver((entries, observer) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  observer.unobserve(entry.target);
-                }
-              });
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
             });
-        
-            sections.forEach(section => {
-              observer.observe(section);
-            });
-          });
-        </script>        
-      </body>
-      <footer class="text-center mt-5 py-4" style="background-color:#FFE5B4;">
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+
+    <footer class="text-center mt-5 py-4" style="background-color:#FFE5B4;">
         <p class="m-0">
-          <small>&#169; 2025 <strong>Michael Arikew, Lone Htoo, Teghsburen Tunamal</strong> - Capstone Project</small>
+            <small>&#169; 2025 <strong>Michael Arikew, Lone Htoo, Teghsburen Tunamal</strong> - Capstone Project</small>
         </p>
         <p class="m-0">
-          <small><strong>Together WeShelter</strong> | All rights reserved.</small>
+            <small><strong>Together WeShelter</strong> | All rights reserved.</small>
         </p>
-      </footer>      
+    </footer>
+</body>
 </html>
