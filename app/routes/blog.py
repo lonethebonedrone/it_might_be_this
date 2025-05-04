@@ -98,12 +98,13 @@ def blogNew():
             tag=form.tag.data,
             author=current_user.id,
             modify_date=dt.datetime.utcnow(),
-            image_path=image_filename  # <- store this in the Blog model
+            image_path=image_filename
         )
         newBlog.save()
-        return redirect(url_for('blog', blogID=newBlog.id))
+        return redirect(url_for('blog', blogID=newBlog.id))  # Ensure you redirect to the right blog page
 
     return render_template('blogform.html', form=form)
+
 
 
 # This route enables a user to edit a blog.  This functions very similar to creating a new 
