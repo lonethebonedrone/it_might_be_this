@@ -72,3 +72,7 @@ def new_post():
         return redirect(url_for('view_blog'))  # Adjust 'view_blog' to your actual route for viewing posts
 
     return render_template('newblogpost.html')  # Create a new template for the form
+
+@app.route('/')
+def home():
+    return redirect(url_for('index'))
