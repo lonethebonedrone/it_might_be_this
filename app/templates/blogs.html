@@ -39,8 +39,8 @@
 
 <div class="container-fluid" style="background-color:#FFE5B4;">
   <div class="fade-in-section text-center">
-    <img src="/static/homeless.png" class="rounded float-end" width="200" height="200" alt="...">
-    <img src="/static/homeless.png" class="rounded float-start" width="200" height="200" alt="...">
+    <img src="/static/smile1.png" class="rounded float-end" width="200" height="200" alt="...">
+    <img src="/static/smile1.png" class="rounded float-start" width="200" height="200" alt="...">
     <br><br><br>
     <h1 class="display-4"><u>Any feedback? Let us know here!</u></h1>
     <a href="/blog/new" class="btn btn-primary btn-sm mt-3" role="button">Add a Post Here</a>
@@ -56,7 +56,7 @@
       {% for blog in blogs %}
         <div class="row border-bottom fade-in-section py-3">
           <div class="col-2">
-            <a href="/blog/{{ blog.id }}">
+            <a href="/newblogpost/{{ blog.id }}">
               {{ moment(blog.create_date).calendar() }}
             </a>
           </div>

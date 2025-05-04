@@ -38,6 +38,37 @@ def reviewform():
 def reviews():
     return render_template('reviews.html')
 
+@app.route('/blogform')
+def blogform():
+    return render_template('blogform.html')
+
 @app.route('/blogs')
 def blogs():
     return render_template('blogs.html')
+
+@app.route('/blog/new')
+def blogsnew():
+           return render_template('blog.html')
+
+# In your routes file (e.g., forum.py or wherever the blog routes are defined)
+
+from flask import render_template, redirect, url_for, request
+from app import app  # Ensure app is imported correctly
+
+@app.route('/blog/new', methods=['GET', 'POST'])
+def new_post():
+    if request.method == 'POST':
+        # Get the form data
+        title = request.form['title']
+        content = request.form['content']
+        
+        # Here, you can add code to save the new post to the database
+        # For example:
+        # new_blog_post = BlogPost(title=title, content=content)
+        # db.session.add(new_blog_post)
+        # db.session.commit()
+        
+        # Redirect to the list of posts after submission
+        return redirect(url_for('view_blog'))  # Adjust 'view_blog' to your actual route for viewing posts
+
+    return render_template('newblogpost.html')  # Create a new template for the form

@@ -16,6 +16,9 @@
             <img width="40" class="bottom-image" src="/static/edit.png">
         </a>
     {% endif %}
+    {% if blog.image_path %}
+        <img src="{{ url_for('static', filename='uploads/' ~ blog.image_path) }}" class="img-fluid mb-3" width="300">
+    {% endif %}
 
     <h1 class="display-5">{{blog.subject}}</h1>
     <p class="fs-3 text-break">
@@ -26,9 +29,6 @@
             {{blog.tag}}
 
     </p>
-
-    <!-- The whole next section is for comments ON blog posts -->
-    <!-- If you are using this as a template, you'll probably delete the whole comment section -->
     <a href="/comment/new/{{blog.id}}" class="btn btn-primary btn-sm" role="button">New Comment</a>
 
     {% if comments %}
@@ -38,7 +38,7 @@
             <a href="/comment/delete/{{comment.id}}"><img width="20" src="/static/delete.png"></a> 
             <a href="/comment/edit/{{comment.id}}"><img width="20" src="/static/edit.png"></a>
         {% endif %}
-        {{moment(comment.create_date).calendar()}} {{comment.author.username}} 
+        {{moment(comment.create_date).calendar()}} {{comment.author.fname}} {{comment.author.lname}} 
         {% if comment.modifydate %}
             modified {{moment(comment.modifydate).calendar()}}
         {% endif %}
@@ -50,9 +50,8 @@
     {% else %}
         <h1 class="display-5">No Comments</h1>
     {% endif %}
-    <!-- end of the comment section! -->
 {% else %}
-
+    <h1 class="display-5">No Blog</h1>
 {% endif %}
 
 {% endblock %}
